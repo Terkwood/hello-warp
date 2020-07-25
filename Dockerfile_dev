@@ -1,0 +1,8 @@
+FROM rust:1.45
+
+WORKDIR /usr/src/hello-warp
+COPY . .
+
+RUN cargo install --path .
+
+CMD ["hello-warp"]
